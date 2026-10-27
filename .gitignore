@@ -1,0 +1,42 @@
+# Eclipse temporary files
+.metadata/
+.recommenders/
+*.launch
+
+# Java build outputs
+bin/
+target/
+build/
+out/
+*.class
+
+# Generated packages
+*.war
+*.ear
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# IDE-specific local files
+.idea/
+*.iml
+.vscode/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.jks
+
+# Database backups
+*.sql
+*.sql.gz
+*.dump

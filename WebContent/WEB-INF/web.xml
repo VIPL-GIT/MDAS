@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MDM</display-name>
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.epx</url-pattern>
+  </servlet-mapping>
+  <servlet>
+		<servlet-name>SimpleCaptcha</servlet-name>
+		<servlet-class>resources.MySimpleCaptcha</servlet-class>
+        <init-param>
+            <param-name>captcha-width</param-name>
+            <param-value>300</param-value>
+        </init-param>
+        <init-param>
+            <param-name>captcha-height</param-name>
+            <param-value>50</param-value>
+        </init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SimpleCaptcha</servlet-name>
+		<url-pattern>/simpleCaptcha.png</url-pattern>
+	</servlet-mapping> 
+	
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+  </context-param>
+  <context-param>
+    <param-name>siteid</param-name>
+    <param-value>3000</param-value>
+  </context-param>
+  <context-param>
+    <description>Location to store uploaded file</description>
+    <param-name>file-upload</param-name>
+    <param-value>
+      D:\Autofiles\
+   </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Location to store uploaded file</description>
+    <param-name>file-upload-server</param-name>
+    <param-value>
+      D:\Autofiles\backup\
+   </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Location to store EMD file</description>
+    <param-name>file-upload-EMD-server</param-name>
+    <param-value>
+      D:\Autofiles\EMD
+   </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Location to store GXT file</description>
+    <param-name>file-upload-GXT-server</param-name>
+    <param-value>
+      D:\Autofiles\GXT
+   </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Location to store MIOS file</description>
+    <param-name>file-upload-MIOS-server</param-name>
+    <param-value>
+      D:\Autofiles\MIOS
+   </param-value>
+  </context-param>
+  
+  <listener>
+    <listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+  </listener>
+  <welcome-file-list>
+    <welcome-file>login.epx</welcome-file>
+  </welcome-file-list>
+  <session-config>
+     <session-timeout>30</session-timeout>
+   </session-config> 
+</web-app>

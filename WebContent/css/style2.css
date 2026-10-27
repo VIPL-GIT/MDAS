@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+#wrapper {
+    min-width: 960px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/**
+ * Base Styles
+ */
+html {
+    overflow: hidden;
+}
+body {
+    
+    font: normal normal normal 69%/160% 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
+}
+
+/**
+ * Text Styles
+ */
+* :focus {outline: none;}
+
+a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+abbr, acronym {
+    font-size: 85%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted black;
+    cursor: help;
+}
+
+abbr[title], acronym[title], dfn[title] {
+    border-bottom: 1px dotted #CCC;
+    cursor: help;
+}
+
+code, kbd, samp, pre, tt, var, .code {
+    font-family: Monaco, 'Panic Sans', 'Lucida Console', 'Courier New', Courier, monospace, sans-serif;
+}
+
+h1 {
+    font-size:26px;  
+}
+h2 {
+    font-size:24px; 
+}
+h3 {
+    font-size:20px;  
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin:0 0 1em 0;
+}
+h1,h2,h3 {
+	font-weight: normal;
+}
+h4,h5,h6,b,strong,caption,th,thead,dt,legend{
+    font-weight:bold; 
+}
+
+ul, ol {
+    padding-left: 2em;
+}
+
+li ul, li ol, ul ul, ol ol, dl dd {
+margin-bottom: 0px;
+margin-left: 0px;
+margin-top: 0px;
+}
+
+small, sup, sub {
+    font-size: 90%;
+}
+
+.code {
+    background-color: #EAEFF4;
+    color: #069;
+    overflow: auto;
+    padding: 2px 6px;
+}
+
+.al {
+    text-align: left !important;
+}
+.ac {
+    text-align: center !important;
+}
+.ar {
+    text-align: right !important;
+}
+.fl {
+    float: left !important;
+}
+.fr {
+    float: right !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-side-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.leading {
+    margin-top: 20px;
+}
+
+.full {
+    width: 100%;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+
+/* ======================== WIDGETS ======================== */
+
+#calhead,
+.fc-widget-header,
+table.display thead tr,
+table.display tfoot tr,
+.tabs > ul > li > a,
+.accordion > header,
+.portlet > header {
+    background-color: #F4F4F4;
+    background-image: url(../images/svg.jpg);
+    background-image: -o-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: -ms-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: -moz-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#F4F4F4));
+    background-image: -webkit-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: linear-gradient(top, #FCFCFC, #F4F4F4);
+    text-shadow: 0 1px 0 #FFF;
+    zoom: 1;
+}
+
+.lte8 #calhead,
+.lte8 .fc-widget-header,
+.lte8 table.display thead tr,
+.lte8 table.display tfoot tr,
+.lte8 .tabs > ul > li > a,
+.lte8 .accordion > header,
+.lte8 .portlet > header {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FCFCFC,endColorstr=#F4F4F4);
+}
+
+.portlet > header h2 {
+    color: #999;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.portlet > section {
+    background: #FFF;
+    border-color: #CCC;
+}
+
+/**
+ * Tabs
+ */
+.tabs > ul > li > a:hover {
+    background-color: #F2F2F2;
+    background-image: -o-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -ms-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -moz-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F2F2F2));
+    background-image: -webkit-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: linear-gradient(top, #FFF, #F2F2F2);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#F2F2F2);
+    zoom: 1;
+}
+
+.tabs > ul > li > a.current {
+    background-color: #FFF;
+    background-image: -o-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+    background-image: -ms-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+    background-image: -moz-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(10%, rgba(234, 238, 243, 0.2)), color-stop(100%, #FFF)), -webkit-gradient(linear, left center, right center, color-stop(0%, #DBDBDB), color-stop(3%, #FFF), color-stop(97%, #FFF), color-stop(100%, #DBDBDB));
+    background-image: -webkit-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+    background-image: linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+    filter: none;
+    border-color: #CCC;
+    border-bottom-color: #FFF;
+    color: #39F;
+    zoom: 1;
+}
+
+.tabs > section {
+    background-color: #FFF;
+    border-color: #CCC;
+}
+
+.tabs.side > ul > li > a.current {
+    background: #FFF;
+    border-color: #CCC;
+    border-right-color: #FFF;
+}
